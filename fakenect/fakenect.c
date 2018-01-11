@@ -430,7 +430,7 @@ freenect_frame_mode freenect_find_depth_mode(freenect_resolution res, freenect_d
 
 int freenect_get_depth_mode_count()
 {
-    return 2;
+    return 3;
 }
 
 freenect_frame_mode freenect_get_depth_mode(int mode_num)

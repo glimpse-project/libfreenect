@@ -532,8 +532,8 @@ int freenect_init(freenect_context **ctx, freenect_usb_context *usb_ctx)
 {
 	input_path = getenv("FAKENECT_PATH");
 	if (!input_path) {
-		printf("Error: Environmental variable FAKENECT_PATH is not set.  Set it to a path that was created using the 'record' utility.\n");
-		exit(1);
+		fprintf(stderr, "Error: Environmental variable FAKENECT_PATH is not set.  Set it to a path that was created using the 'record' utility.\n");
+		return -1;
 	}
 
 	char *var = getenv("FAKENECT_LOOP");
